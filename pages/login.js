@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from 'react-bootstrap/Table';
+import { Button } from 'react-bootstrap';
 
 const Login = () => {
   const router = useRouter();
@@ -19,18 +22,18 @@ const Login = () => {
     });
 
     if (response.ok) {
-        setError('valid credentials');
+        setError('You Are Registered');
     } else {
-      setError('Invalid credentials');
+      setError('You Are Not Registered Yet');
     }
   }
 
   return (
     <>
       <Head>
-        <title>Login</title>
+        <title>Varify</title>
       </Head>
-      <h1>Login</h1>
+      <h1>Enter Your Name and Adress to see if youre a registered supplier yet!</h1>
       {error && <p>{error}</p>}
       <form onSubmit={handleSubmit}>
         <label>
@@ -41,7 +44,7 @@ const Login = () => {
           Password:
           <input type="password" value={credentials.password} onChange={(event) => setCredentials({ ...credentials, password: event.target.value })} />
         </label>
-        <button type="submit">Login</button>
+        <Button variant="primary" type="submit">Varify</Button>
       </form>
     </>
   );
