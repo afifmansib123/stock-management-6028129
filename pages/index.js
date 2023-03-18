@@ -110,7 +110,7 @@ export default function Home() {
 ))}
 </tbody>
 </Table>
-<a href="/login">Varify Supplier Credantials</a>
+<a href="/login">Varify Supplier Credantials :</a>
 <div><br/>
 <p>**USER GUIDE*** <br/> This is the Sullier management page created by @AfifMansibChowdhury. You can add list of suppliers using the 'Add New Supplier' Button. Once the supplier is added , there will be an option to update and delete the supplier.</p>
 <p>Functionalities  </p><br/>
